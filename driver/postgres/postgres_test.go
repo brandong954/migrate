@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/mattes/migrate/file"
-	"github.com/mattes/migrate/migrate/direction"
-	pipep "github.com/mattes/migrate/pipe"
+	"github.com/brandong954/migrate/file"
+	"github.com/brandong954/migrate/migrate/direction"
+	pipep "github.com/brandong954/migrate/pipe"
 )
 
 // TestMigrate runs some additional tests on Migrate().
