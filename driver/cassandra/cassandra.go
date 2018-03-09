@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gocql/gocql"
 	"github.com/brandong954/migrate/driver"
 	"github.com/brandong954/migrate/file"
 	"github.com/brandong954/migrate/migrate/direction"
+	"github.com/gocql/gocql"
 )
 
 type Driver struct {
@@ -52,6 +52,7 @@ func (driver *Driver) Initialize(rawurl string) error {
 	cluster.Keyspace = u.Path[1:len(u.Path)]
 	cluster.Consistency = gocql.All
 	cluster.Timeout = 1 * time.Minute
+	cluster.ConnectTimeout = 5 * time.Second
 
 	if len(u.Query().Get("protocol")) > 0 {
 		protoversion, err := strconv.Atoi(u.Query().Get("protocol"))
