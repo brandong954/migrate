@@ -53,6 +53,7 @@ func (driver *Driver) Initialize(rawurl string) error {
 	cluster.Consistency = gocql.All
 	cluster.Timeout = 1 * time.Minute
 	cluster.ConnectTimeout = 5 * time.Second
+	cluster.DisableInitialHostLookup = true
 
 	if len(u.Query().Get("protocol")) > 0 {
 		protoversion, err := strconv.Atoi(u.Query().Get("protocol"))
