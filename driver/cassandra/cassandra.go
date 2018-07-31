@@ -50,7 +50,7 @@ func (driver *Driver) Initialize(rawurl string) error {
 
 	cluster := gocql.NewCluster(u.Host)
 	cluster.Keyspace = u.Path[1:len(u.Path)]
-	cluster.Consistency = gocql.All
+	cluster.Consistency = gocql.Quorum
 	cluster.Timeout = 1 * time.Minute
 	cluster.ConnectTimeout = 5 * time.Second
 	cluster.DisableInitialHostLookup = true
