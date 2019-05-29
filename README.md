@@ -23,7 +23,6 @@ __Features__
 
  * [PostgreSQL](https://github.com/brandong954/migrate/tree/master/driver/postgres)
  * [Cassandra](https://github.com/brandong954/migrate/tree/master/driver/cassandra)
- * [SQLite](https://github.com/brandong954/migrate/tree/master/driver/sqlite3)
  * [MySQL](https://github.com/brandong954/migrate/tree/master/driver/mysql) ([experimental](https://github.com/brandong954/migrate/issues/1#issuecomment-58728186))
  * Bash (planned)
 
